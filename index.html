@@ -43,6 +43,7 @@ const SECTIONS = [
       tagline:'<strong>Agile Lens</strong> is an NYC-based immersive design studio. We are XR specialists, Unreal Engine wizards, and theater architects with a 10-year track record of solving hard problems with emerging technology \u2014 for clients including the RSC, Kennedy Center, Lincoln Center, Royal Caribbean, Google, and Disney.<br><br><div class="al-stats"><div class="al-stat"><span class="al-stat-num">10</span><span class="al-stat-lbl">Years in XR</span></div><div class="al-stat"><span class="al-stat-num">100+</span><span class="al-stat-lbl">Projects shipped</span></div><div class="al-stat"><span class="al-stat-num">5</span><span class="al-stat-lbl">Years building VR theater (A Christmas Carol VR)</span></div><div class="al-stat"><span class="al-stat-num">1,000+</span><span class="al-stat-lbl">Visitors/day throughput design</span></div></div>',
       tags:'NYC \u00b7 Unreal Authorized Trainers \u00b7 Mixed Reality Theater' },
     cases: [
+      { layout:'orbit', title:'Agile Lens' },
       { title:'Track Record in Spatial Storytelling', subtitle:'From experiment to institutional-scale immersive theater',
         img:'',
         bullets:['<strong>A Christmas Carol VR</strong> (Actors Theatre of Louisville, 2021\u2013present) \u2014 5 iterations of fully-virtual professional theater, awarded the RSC + XR Network+ grant for the Virtual Rehearsal Room',
@@ -268,6 +269,9 @@ body.vertical-mode .bg{position:fixed}
 .cover-logo-bar img{height:clamp(28px,3.5vh,42px);width:auto}
 .cover-logo-bar .cover-logo-agilelens{filter:brightness(0) invert(1)}
 .cover-logo-bar .cover-logo-divider{width:1px;height:36px;background:rgba(255,255,255,.2)}
+/* ── Orbit layout (Agile Lens client constellation) ──────────────────── */
+.layout-orbit{padding:0!important;align-items:stretch!important;justify-content:stretch!important}
+.orbit-stage{position:absolute;inset:0}
 .slide-lesson{padding-bottom:clamp(80px,10vh,140px)}
 .year-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(10rem,24vw,26rem);font-weight:700;letter-spacing:-.06em;line-height:1;color:rgba(255,255,255,.028);pointer-events:none;user-select:none}
 .lesson-ey{display:flex;align-items:center;justify-content:center;gap:14px;font-size:clamp(.7rem,1.1vw,1rem);font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-bottom:30px}
@@ -877,6 +881,11 @@ SECTIONS.forEach((sec,si)=>{
   deck.appendChild(ls);allSlides.push(ls);lessonIdxs.push(allSlides.length-1);
   sec.cases.forEach(c=>{
     const s=document.createElement('div');s.className=`slide case-slide${ac}${c.layout?' layout-'+c.layout:''}${c.gridCover?' grid-cover':''}`;s.dataset.type='case';s.dataset.year=sec.year;s.dataset.section=si;
+    // layout: 'orbit' — Agile Lens client constellation (ported from NXT BLD)
+    if(c.layout==='orbit'){
+      s.innerHTML='<div class="orbit-stage"></div>';
+      deck.appendChild(s);allSlides.push(s);return;
+    }
     // layout: 'big' — full-slide statement text (bigText, optional title/subtitle/bigCaption)
     if(c.layout==='big'){
       s.innerHTML=`<div class="big-stack">${c.pill&&c.title?`<div class="big-pill accent-${sec.accent||'teal'}">${c.title}</div>`:c.title?`<h2 class="big-eyebrow">${c.title.replace(/\n/g,'<br>')}</h2>`:''} ${c.subtitle?`<div class="big-sub">${c.subtitle}</div>`:''}${c.bigText?`<h1 class="big-text">${c.bigText.replace(/\n/g,'<br>')}</h1>`:''}${c.bigCaption?`<p class="big-caption">${c.bigCaption.replace(/\n/g,'<br>')}</p>`:''}</div>`;
@@ -1202,6 +1211,44 @@ document.getElementById('btn-prev').addEventListener('click',goPrev);
     else if(e.key==='2'){setLoop(1);curLoop=1;e.stopPropagation();}
     else if(e.key==='3'){setLoop(2);curLoop=2;e.stopPropagation();}
   },true);
+})();
+
+// ── Agile Lens orbit slide (ported from NXT BLD 2026) ──────────────────────
+(function(){
+  const orbitStage=document.querySelector('.layout-orbit .orbit-stage');
+  if(!orbitStage)return;
+  const ns='http://www.w3.org/2000/svg';
+  const W=1920,H=1080,CX=W/2,CY=H/2,monocleR=200,orbitR=monocleR+110;
+  const svg=document.createElementNS(ns,'svg');
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+  svg.style.cssText='position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.4s ease-out';
+  orbitStage.appendChild(svg);
+  const CIRC=2*Math.PI*monocleR;
+  const ring1=document.createElementNS(ns,'circle');ring1.setAttribute('cx',CX);ring1.setAttribute('cy',CY);ring1.setAttribute('r',monocleR);ring1.setAttribute('fill','none');ring1.setAttribute('stroke','rgba(255,255,255,.12)');ring1.setAttribute('stroke-width','28');ring1.setAttribute('stroke-linecap','round');ring1.setAttribute('stroke-dasharray',CIRC);ring1.setAttribute('stroke-dashoffset',CIRC);ring1.setAttribute('transform',`rotate(-90 ${CX} ${CY})`);ring1.style.transition='stroke-dashoffset 1.6s cubic-bezier(.65,0,.35,1)';svg.appendChild(ring1);
+  const ring2=document.createElementNS(ns,'circle');ring2.setAttribute('cx',CX);ring2.setAttribute('cy',CY);ring2.setAttribute('r',monocleR);ring2.setAttribute('fill','none');ring2.setAttribute('stroke','rgba(255,255,255,.06)');ring2.setAttribute('stroke-width','34');ring2.setAttribute('stroke-linecap','round');ring2.setAttribute('stroke-dasharray',CIRC);ring2.setAttribute('stroke-dashoffset',CIRC);ring2.setAttribute('transform',`rotate(-90 ${CX} ${CY})`);ring2.style.transition='stroke-dashoffset 1.6s cubic-bezier(.65,0,.35,1) .1s';svg.appendChild(ring2);
+  const hr=monocleR+16;[-1.41,-0.2].forEach(a=>{const hx=CX+hr*Math.cos(a),hy=CY+hr*Math.sin(a);const h=document.createElementNS(ns,'circle');h.setAttribute('cx',hx);h.setAttribute('cy',hy);h.setAttribute('r','8');h.setAttribute('fill','none');h.setAttribute('stroke','rgba(255,255,255,.1)');h.setAttribute('stroke-width','5');svg.appendChild(h);});
+  const mScale=monocleR/374,eyeDx=(775-407)*mScale,eyeDy=(788-432)*mScale,ex=CX+eyeDx,ey=CY+eyeDy,eyeAngle=Math.atan2(eyeDy,eyeDx),cs={x:CX+monocleR*Math.cos(eyeAngle),y:CY+monocleR*Math.sin(eyeAngle)},ctrl={x:(cs.x+ex)/2+15*Math.cos(eyeAngle+Math.PI/2),y:(cs.y+ey)/2+15*Math.sin(eyeAngle+Math.PI/2)};
+  const cord=document.createElementNS(ns,'path');cord.setAttribute('d',`M${cs.x} ${cs.y} Q${ctrl.x} ${ctrl.y} ${ex} ${ey}`);cord.setAttribute('fill','none');cord.setAttribute('stroke','rgba(255,255,255,.08)');cord.setAttribute('stroke-width','4');cord.setAttribute('stroke-linecap','round');svg.appendChild(cord);
+  const ep=document.createElementNS(ns,'circle');ep.setAttribute('cx',ex);ep.setAttribute('cy',ey);ep.setAttribute('r','18');ep.setAttribute('fill','none');ep.setAttribute('stroke','rgba(255,255,255,.1)');ep.setAttribute('stroke-width','5');svg.appendChild(ep);
+  const imgW=852,imgH=877,ringCX=407,ringCY=432,ringR=374,ms=monocleR/ringR,mW=imgW*ms,mH=imgH*ms,mX=CX-ringCX*ms,mY=CY-ringCY*ms;
+  const pulseImg=document.createElementNS(ns,'image');pulseImg.setAttribute('href','monocle-white.png');pulseImg.setAttribute('x',mX+1);pulseImg.setAttribute('y',mY-4);pulseImg.setAttribute('width',mW);pulseImg.setAttribute('height',mH);pulseImg.setAttribute('opacity','0');svg.appendChild(pulseImg);
+  [['AGILE LENS',42,700,'rgba(255,255,255,.85)',CY-14],['IMMERSIVE DESIGN STUDIO',16,400,'rgba(255,255,255,.35)',CY+16],['EST. 2016',14,400,'rgba(255,255,255,.28)',CY+38],['NYC',13,400,'rgba(255,255,255,.2)',CY+58]].forEach(([txt,fs,fw,fill,y])=>{const t=document.createElementNS(ns,'text');t.setAttribute('x',CX);t.setAttribute('y',y);t.setAttribute('text-anchor','middle');t.setAttribute('dominant-baseline','middle');t.setAttribute('fill',fill);t.setAttribute('font-family','Space Grotesk,sans-serif');t.setAttribute('font-size',fs);t.setAttribute('font-weight',fw);t.setAttribute('letter-spacing','4');t.textContent=txt;svg.appendChild(t);});
+  const FIXED=[{name:'RSC',angle:-Math.PI/2},{name:'Kennedy Center',angle:0},{name:'Royal Caribbean',angle:Math.PI/2},{name:'Lincoln Center',angle:Math.PI}];
+  const OTHERS=['Four Seasons','Waldorf Astoria','Epic Games','Google','Samsung','Dell','Disney','CBS'];
+  const gaps=[{from:-Math.PI/2,to:0},{from:0,to:Math.PI/2},{from:Math.PI/2,to:Math.PI},{from:Math.PI,to:3*Math.PI/2}];
+  const ALL=[...FIXED];OTHERS.forEach((name,i)=>{const gap=gaps[i%4];const slot=i<4?1/3:2/3;ALL.push({name,angle:gap.from+(gap.to-gap.from)*slot});});ALL.sort((a,b)=>a.angle-b.angle);
+  const clientEls=[];ALL.forEach(({name,angle})=>{const el=document.createElementNS(ns,'text');el.setAttribute('x',CX+Math.cos(angle)*orbitR);el.setAttribute('y',CY+Math.sin(angle)*orbitR);el.setAttribute('text-anchor','middle');el.setAttribute('dominant-baseline','middle');el.setAttribute('fill','rgba(255,255,255,.6)');el.setAttribute('font-family','Space Grotesk,sans-serif');el.setAttribute('font-size','18');el.setAttribute('font-weight','600');el.setAttribute('letter-spacing','2.5');el.textContent=name.toUpperCase();el.dataset.baseAngle=angle;svg.appendChild(el);clientEls.push(el);});
+  const sub=document.createElementNS(ns,'text');sub.setAttribute('x',CX);sub.setAttribute('y',H-90);sub.setAttribute('text-anchor','middle');sub.setAttribute('fill','rgba(255,255,255,.2)');sub.setAttribute('font-family','Space Grotesk,sans-serif');sub.setAttribute('font-size','13');sub.setAttribute('letter-spacing','2');sub.textContent='BOOTSTRAPPED · XR SPECIALISTS · 10 YEARS';svg.appendChild(sub);
+  let _humCtx=null,_humOscs=[],_humGain=null;
+  function startHum(){try{if(!_humCtx)_humCtx=new(window.AudioContext||window.webkitAudioContext)();if(_humCtx.state==='suspended')_humCtx.resume();_humOscs.forEach(o=>{try{o.stop();}catch(e){}});_humOscs=[];_humGain=_humCtx.createGain();_humGain.gain.value=0;_humGain.connect(_humCtx.destination);[[68,'sine',1.0],[136,'sine',.55],[204,'sine',.25]].forEach(([freq,type,rel])=>{const o=_humCtx.createOscillator();const g=_humCtx.createGain();o.type=type;o.frequency.value=freq;g.gain.value=rel;o.connect(g);g.connect(_humGain);o.start();_humOscs.push(o);});_humGain.gain.setValueAtTime(0,_humCtx.currentTime);_humGain.gain.linearRampToValueAtTime(0.06,_humCtx.currentTime+1.2);}catch(e){}}
+  function stopHum(){try{if(_humGain&&_humCtx){_humGain.gain.setValueAtTime(_humGain.gain.value,_humCtx.currentTime);_humGain.gain.linearRampToValueAtTime(0,_humCtx.currentTime+.6);const o=_humOscs;_humOscs=[];setTimeout(()=>o.forEach(x=>{try{x.stop();}catch(e){}}),700);}}catch(e){}}
+  let lensRunning=false,lensAngle=0,lensT=0;
+  function lensStep(){if(!lensRunning)return;lensAngle+=.003;lensT+=.02;clientEls.forEach(el=>{const base=parseFloat(el.dataset.baseAngle),a=base+lensAngle;el.setAttribute('x',CX+Math.cos(a)*orbitR);el.setAttribute('y',CY+Math.sin(a)*orbitR);el.setAttribute('fill',`rgba(255,255,255,${(0.3+0.5*(1-(Math.sin(a)+1)/2)).toFixed(2)})`);});const pulse=0.06+0.06*Math.sin(lensT);pulseImg.setAttribute('opacity',pulse.toFixed(3));if(_humGain&&_humCtx&&_humOscs.length){const vol=0.04+0.05*((Math.sin(lensT)+1)/2);_humGain.gain.setTargetAtTime(vol,_humCtx.currentTime,.08);}requestAnimationFrame(lensStep);}
+  const orbitSlide=orbitStage.closest('.slide');
+  function orbitEnter(){if(!lensRunning){lensRunning=true;lensT=0;startHum();requestAnimationFrame(lensStep);}svg.style.opacity='1';ring1.setAttribute('stroke-dashoffset','0');ring2.setAttribute('stroke-dashoffset','0');}
+  function orbitExit(){lensRunning=false;stopHum();svg.style.opacity='0';ring1.setAttribute('stroke-dashoffset',CIRC);ring2.setAttribute('stroke-dashoffset',CIRC);}
+  new MutationObserver(()=>{if(orbitSlide.classList.contains('active'))orbitEnter();else orbitExit();}).observe(orbitSlide,{attributes:true,attributeFilter:['class']});
+  if(orbitSlide.classList.contains('active'))orbitEnter();
 })();
 
 // ── Playing indicator + Autoplay ──
