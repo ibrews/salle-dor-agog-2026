@@ -57,7 +57,7 @@ const SECTIONS = [
       tags:'Mixed Reality \u00b7 Immersive Theater \u00b7 Quest 3' },
     cases: [
       { title:'The Spectra-3 Digital Binoculars', subtitle:'Handheld stereo AR \u2014 no straps, instant return to physical reality',
-        img:'',
+        img:'images/spectra3-product.jpg',
         bullets:['Held like binoculars on a neck lanyard \u2014 audiences lower them instantly to make eye contact with friends or navigate safely',
           'Group Unlock: when one Assessor focuses on a memory trigger, audio plays over room speakers \u2014 keeping passive guests inside the story',
           'Designed for high throughput: 1,000+ visitors/day in pulsing groups of 20, every 10 minutes'] },
@@ -70,12 +70,12 @@ const SECTIONS = [
       tags:'Site-Specific \u00b7 Western North Carolina \u00b7 Hurricane Helene' },
     cases: [
       { title:'The Onboarding: Welcome to the Red Zone', subtitle:'Role: FEMA / Insurance Assessor \u00b7 Setting: Mobile Command Tent',
-        img:'images/helene-candler.jpg',
+        img:'images/field-office.jpg',
         bullets:['\u201cThe floodwaters receded three weeks ago, but the structural damage is catastrophic. Your objective is simple: Assessment. Tag any salvageable property and confirm structural integrity for the demolition crews.\u201d',
           '\u201cBe warned: The Spectra-3 lenses pick up\u2026 residual energy. Echoes of the people who were trapped here. Do not get distracted. Do your job.\u201d',
           'Audiences enter as detached professionals \u2014 and leave having witnessed something they can\u2019t unfeel'] },
       { title:'Mud & Memory: The Digital Layer', subtitle:'The Spectra-3 acts as a forensic flashlight',
-        img:'images/helene-greenriver.jpg',
+        img:'images/ash-memory-chair.jpg',
         bullets:['The story lives in the friction between what you uncover in the light (Imagination) and what you feel in the dark (Grit)',
           'Virtual particle trails interact with physical objects \u2014 a light flickers as a ghost passes. The digital and physical are inseparable.',
           'Three scanning frequencies. Three conflicting truths. One house.'] },
@@ -88,17 +88,17 @@ const SECTIONS = [
       tags:'Dissociation \u00b7 Survival \u00b7 Imagination \u00b7 Trauma' },
     cases: [
       { title:'Loop 1: The Vivid Wish', subtitle:'Childhood / Imagination \u2014 \u201cLife Is an Adventure\u201d',
-        img:'',
+        img:'images/spectra3-jungle-gold.png',
         bullets:['Audio: whispered giggles, acoustic guitar, crickets. The ruined room is warm and alive.',
           'Visuals: glowing fireflies, a blanket fort transforming into an animated forest tent through the Spectra-3',
           'The younger sibling has reimagined this pitch-black, mud-caked room as a magical camping trip \u2014 and for a moment, it works'] },
       { title:'Loop 2: The Golden Lie', subtitle:'The Older Sibling / Protection \u2014 \u201cWe Are Safe\u201d',
-        img:'',
+        img:'images/observer-livingroom.png',
         bullets:['Audio: lullabies sung slightly too loud \u2014 drowning out the sound of rushing floodwater and snapping trees outside',
           'Visuals: warm nightlights, a roaring fireplace overlaying the debris pile. Cozy. Safe. A lie.',
           'The older sibling has become the brave protector \u2014 creating a desperate illusion to keep the younger child calm while they wait to be rescued'] },
       { title:'Loop 3: The Derelict Truth', subtitle:'Reality / Trauma \u2014 The Battery Dies',
-        img:'',
+        img:'images/spectra3-dust-room.png',
         bullets:['Audio: emergency sirens, the roar of a mudslide, frantic radio static cutting through silence',
           'The flashlight beam flickers. The magic vanishes. Wet clay. Structural collapse. Pitch darkness.',
           'The batteries die. The illusions collapse. Assessors see the ruin for what it is \u2014 and realize they don\u2019t know if the children made it out'] },
@@ -125,7 +125,7 @@ const SECTIONS = [
           '<strong>Jamie Parker</strong>, a child in western North Carolina, was buried under twelve feet of mudslide debris. His dog Tucker, also buried, kept him alive. His mother could only listen.',
           '<strong>Diego</strong>, age 7, was trapped in a mobile home as hundred-foot trees fell around his family. He now panics at the sound of rain. <em>Asheville Watchdog</em> maintains an updated count of Helene\u2019s dead \u2014 over 240 named lives across the Southeast.'] },
       { title:'The Vigil', subtitle:'The Final Assessment',
-        img:'images/helene-old-fort.jpg',
+        img:'images/sky-lanterns-vigil.png',
         bullets:['The Spectra-3 battery dies. Darkness. Then it flickers back on \u2014 the final assessment report: two names. One status: \u201cRecovered.\u201d One: \u201cNot Recovered.\u201d',
           'The older sibling\u2019s voice plays from a recorded interview, months later: <em>\u201cShe kept asking when the lights would come back on.\u201d</em>',
           'Digital candles fill the room \u2014 one per documented child death from extreme weather events. The number is overwhelming. Bear witness. Act.'] },
@@ -226,7 +226,8 @@ body.vertical-mode .bg{position:fixed}
 .tr-room.tr-loop-1::before{background:radial-gradient(ellipse 60% 70% at 50% 30%,rgba(245,158,11,.22) 0%,transparent 65%)}
 .tr-room.tr-loop-2::before{background:radial-gradient(ellipse 60% 70% at 50% 30%,rgba(244,63,94,.18) 0%,transparent 65%)}
 .tr-room-label{position:absolute;top:14px;left:20px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-.tr-props{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
+.tr-props{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;z-index:1}
+@media(max-width:900px){.tr-props{grid-template-columns:repeat(2,1fr)}}
 .tr-prop{background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;transition:all .55s ease}
 .tr-room.tr-loop-0 .tr-prop{border-color:rgba(0,212,255,.35)}
 .tr-room.tr-loop-1 .tr-prop{border-color:rgba(245,158,11,.4)}
@@ -244,6 +245,29 @@ body.vertical-mode .bg{position:fixed}
 .tr-narration.tr-loop-1{border-left-color:var(--amber)}
 .tr-narration.tr-loop-2{border-left-color:var(--rose)}
 .tr-hint{margin-top:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28)}
+/* ── Custom close slide ─────────────────────────────────────────────── */
+.slide-sd-close{flex-direction:column;justify-content:center;align-items:center;padding:clamp(40px,4vw,80px)}
+.sd-close-stack{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(18px,2vw,30px);max-width:1100px;width:100%}
+.sd-close-event{font-size:clamp(.7rem,1.1vw,1rem);font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);opacity:.85}
+.sd-close-title{font-size:clamp(2.6rem,5.8vw,5.8rem);font-weight:700;line-height:1.05;letter-spacing:-.025em;color:#fff;margin:0}
+.sd-close-and{background:linear-gradient(130deg,#fff 20%,#fde68a 55%,#f59e0b 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:#fff}
+.sd-close-sub{font-size:clamp(.95rem,1.4vw,1.25rem);color:rgba(255,255,255,.65);max-width:780px;line-height:1.5;margin:0}
+.sd-close-contact{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.sd-close-pill{display:inline-flex;align-items:center;gap:14px;padding:14px 28px;background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.32);border-radius:60px;color:#fff;text-decoration:none;font-size:clamp(.85rem,1.2vw,1.05rem);font-weight:600;transition:all .25s ease}
+.sd-close-pill:hover{background:rgba(245,158,11,.15);border-color:var(--amber);transform:translateY(-1px)}
+.sd-close-pill span{font-size:.65rem;letter-spacing:.2em;color:var(--amber);font-weight:700}
+.sd-close-logos{display:flex;align-items:center;justify-content:center;gap:clamp(32px,5vw,80px);margin-top:18px;width:100%;max-width:780px}
+.sd-logo-block{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1}
+.sd-logo-agilelens{width:clamp(140px,16vw,200px);height:auto;filter:brightness(0) invert(1);opacity:.92}
+.sd-logo-agog{width:clamp(120px,14vw,170px);height:auto;opacity:.92;filter:brightness(1.1)}
+.sd-logo-caption{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500;text-align:center}
+.sd-logo-divider{width:1px;height:60px;background:rgba(255,255,255,.15)}
+.sd-close-coda{margin-top:28px;font-style:italic;color:rgba(255,255,255,.55);font-size:clamp(.85rem,1.15vw,1.05rem);max-width:680px;line-height:1.5;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);width:100%}
+/* ── Cover logo bar ─────────────────────────────────────────────────── */
+.cover-logo-bar{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:36px;opacity:.85}
+.cover-logo-bar img{height:clamp(28px,3.5vh,42px);width:auto}
+.cover-logo-bar .cover-logo-agilelens{filter:brightness(0) invert(1)}
+.cover-logo-bar .cover-logo-divider{width:1px;height:36px;background:rgba(255,255,255,.2)}
 .slide-lesson{padding-bottom:clamp(80px,10vh,140px)}
 .year-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(10rem,24vw,26rem);font-weight:700;letter-spacing:-.06em;line-height:1;color:rgba(255,255,255,.028);pointer-events:none;user-select:none}
 .lesson-ey{display:flex;align-items:center;justify-content:center;gap:14px;font-size:clamp(.7rem,1.1vw,1rem);font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-bottom:30px}
@@ -842,7 +866,7 @@ function playBing(){try{const c=sfxCtx(),t=c.currentTime,o=c.createOscillator(),
 
 // Cover
 const cov=document.createElement('div');cov.className='slide active';cov.dataset.type='cover';
-cov.innerHTML=`<div class="event-tag">AGOG Open Call 2026 &middot; Immersive Media &amp; Climate</div><h1 class="talk-title">Salle d&rsquo;Or</h1><p class="talk-subtitle">A Mixed Reality Installation Exploring Climate Disaster,<br>Displacement &amp; Dissociation</p><div class="speaker-card"><div><div class="speaker-name">An Agile Lens Production</div><div class="speaker-co">Immersive Design Studio &middot; NYC &middot; agilelens.com</div></div></div>`;
+cov.innerHTML=`<div class="event-tag">AGOG Open Call 2026 &middot; Immersive Media &amp; Climate</div><h1 class="talk-title">Salle d&rsquo;Or</h1><p class="talk-subtitle">A Mixed Reality Installation Exploring Climate Disaster,<br>Displacement &amp; Dissociation</p><div class="speaker-card"><div><div class="speaker-name">An Agile Lens Production</div><div class="speaker-co">Immersive Design Studio &middot; NYC &middot; agilelens.com</div></div></div><div class="cover-logo-bar"><img src="images/agilelens_logo.svg" alt="Agile Lens" class="cover-logo-agilelens"><div class="cover-logo-divider"></div><img src="images/agog_logo.png" alt="AGOG" class="cover-logo-agog"></div>`;
 deck.appendChild(cov);allSlides.push(cov);
 
 // Build sections
@@ -1073,11 +1097,32 @@ mapS.innerHTML=`<div class="map-label">The Journey, Mapped</div><svg id="map-svg
 deck.appendChild(mapS);allSlides.push(mapS);
 
 // Close slide with inline Agile Lens SVG logo
-const cls=document.createElement('div');cls.className='slide';cls.dataset.type='close';
-cls.innerHTML=`<div class="close-ey">Thank You</div><h2 class="close-title">Let\u2019s Talk.</h2><p class="close-sub">Thinking spatially?</p>
-<div class="contact-row"><div class="contact-pill"><span class="lbl">Web</span>example.com</div><div class="contact-pill"><span class="lbl">Email</span>hi@example.com</div></div>
-<div class="close-qr-row"><div class="qr-card"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://github.com/ibrews/spatial-deck" alt="QR"><div class="qr-label">Spatial Deck</div><div class="qr-badge b-teal">Fork it! Ship your own deck!</div></div></div>
-<div style="position:absolute;bottom:clamp(30px,4vh,60px);left:50%;transform:translateX(-50%);opacity:.35;z-index:2"><svg width="200" height="40" viewBox="0 0 869 175" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M266.385 134.295L264.681 136H249.34L247.635 134.295L239.113 112.137L235.704 110.432H193.09L189.681 112.137L181.159 134.295L179.454 136H164.114L162.409 134.295V117.25L201.613 18.3878L203.318 16.6833H225.476L227.181 18.3878L266.385 117.25V134.295ZM230.59 88.2733L215.249 47.3647H213.545L198.204 88.2733L199.909 89.9778H228.886L230.59 88.2733ZM346.604 52.4783V127.477C346.604 158.159 327.854 171.795 303.991 171.795C283.537 171.795 269.901 161.568 268.196 146.227L269.901 144.523H290.355L292.059 146.227C293.764 149.636 297.173 151.341 303.991 151.341C315.923 151.341 322.741 144.523 322.741 129.182H321.036C321.036 129.182 314.218 137.705 298.878 137.705C278.423 137.705 261.378 120.659 261.378 93.3869C261.378 66.1145 278.423 49.0692 298.878 49.0692C314.218 49.0692 321.036 57.5919 321.036 57.5919H322.741L324.445 52.4783L326.15 50.7738H344.9L346.604 52.4783ZM285.241 93.3869C285.241 107.023 290.355 117.25 303.991 117.25C317.627 117.25 322.741 107.023 322.741 93.3869C322.741 79.7507 317.627 69.5235 303.991 69.5235C290.355 69.5235 285.241 79.7507 285.241 93.3869ZM378.964 35.433L377.259 37.1376H356.805L355.1 35.433V18.3878L356.805 16.6833H377.259L378.964 18.3878V35.433ZM378.964 134.295L377.259 136H356.805L355.1 134.295V52.4783L356.805 50.7738H377.259L378.964 52.4783V134.295ZM411.31 134.295L409.605 136H389.151L387.446 134.295V18.3878L389.151 16.6833H409.605L411.31 18.3878V134.295ZM496.496 93.3869V100.205L494.791 101.91H441.951L440.247 103.614C440.247 107.023 443.656 117.25 457.292 117.25C462.405 117.25 467.519 115.546 469.223 112.137L470.928 110.432H491.382L493.087 112.137C491.382 122.364 482.86 137.705 457.292 137.705C428.315 137.705 414.679 117.25 414.679 93.3869C414.679 69.5235 428.315 49.0692 455.587 49.0692C482.86 49.0692 496.496 69.5235 496.496 93.3869ZM469.223 84.8643L470.928 83.1597C470.928 81.4552 469.223 69.5235 455.587 69.5235C441.951 69.5235 440.247 81.4552 440.247 83.1597L441.951 84.8643H469.223ZM615.779 134.295L614.075 136H537.371L535.667 134.295V18.3878L537.371 16.6833H557.825L559.53 18.3878V113.841L561.234 115.546H614.075L615.779 117.25V134.295ZM687.249 93.3869V100.205L685.545 101.91H632.705L631 103.614C631 107.023 634.409 117.25 648.045 117.25C653.159 117.25 658.273 115.546 659.977 112.137L661.682 110.432H682.136L683.84 112.137C682.136 122.364 673.613 137.705 648.045 137.705C619.068 137.705 605.432 117.25 605.432 93.3869C605.432 69.5235 619.068 49.0692 646.341 49.0692C673.613 49.0692 687.249 69.5235 687.249 93.3869ZM659.977 84.8643L661.682 83.1597C661.682 81.4552 659.977 69.5235 646.341 69.5235C632.705 69.5235 631 81.4552 631 83.1597L632.705 84.8643H659.977ZM770.778 134.295L769.073 136H748.619L746.914 134.295V84.8643C746.914 76.3416 743.505 69.5235 733.278 69.5235C721.347 69.5235 714.528 76.3416 714.528 91.6824V134.295L712.824 136H692.37L690.665 134.295V52.4783L692.37 50.7738H711.119L712.824 52.4783L714.528 57.5919H716.233C719.642 54.1828 726.46 49.0692 738.392 49.0692C758.846 49.0692 770.778 62.7054 770.778 83.1597V134.295ZM847.495 110.432C847.495 124.068 837.268 137.705 809.995 137.705C786.132 137.705 772.496 125.773 772.496 108.728L774.2 107.023H794.654L796.359 108.728C796.359 115.546 801.473 117.25 809.995 117.25C818.518 117.25 823.631 115.546 823.631 110.432C823.631 103.614 816.813 103.614 806.586 101.91C796.359 100.205 774.2 95.0914 774.2 74.6371C774.2 61.0009 784.427 49.0692 809.995 49.0692C830.449 49.0692 845.79 57.5919 845.79 74.6371L844.086 76.3416H823.631L821.927 74.6371C821.927 71.2281 818.518 69.5235 809.995 69.5235C801.473 69.5235 798.064 71.2281 798.064 76.3416C798.064 83.1597 808.291 83.1597 818.518 84.8643C828.745 86.5688 847.495 89.9778 847.495 110.432Z" fill="white"/><circle cx="71" cy="73" r="60" stroke="white" stroke-width="8" fill="none"/><line x1="115" y1="117" x2="142" y2="155" stroke="white" stroke-width="8" stroke-linecap="round"/></svg></div>`;
+// Hide the framework's auto-generated Map slide \u2014 irrelevant for a grant submission
+mapS.dataset.hidden='1';
+
+const cls=document.createElement('div');cls.className='slide slide-sd-close';cls.dataset.type='close';
+cls.innerHTML=`
+<div class="sd-close-stack">
+  <div class="sd-close-event">AGOG Open Call 2026 &middot; Climate Futures + Immersive Media</div>
+  <h2 class="sd-close-title">Bear Witness.<br><span class="sd-close-and">Build It With Us.</span></h2>
+  <p class="sd-close-sub">Salle d&rsquo;Or is in active development. We are seeking grant funding, venue partnerships, and NGO co-producers to move from concept to first production.</p>
+  <div class="sd-close-contact">
+    <a class="sd-close-pill" href="mailto:info@agilelens.com"><span>EMAIL</span>info@agilelens.com</a>
+    <a class="sd-close-pill" href="https://agilelens.com" target="_blank" rel="noopener"><span>WEB</span>agilelens.com</a>
+  </div>
+  <div class="sd-close-logos">
+    <div class="sd-logo-block">
+      <img src="images/agilelens_logo.svg" alt="Agile Lens" class="sd-logo-agilelens">
+      <div class="sd-logo-caption">An Agile Lens Production</div>
+    </div>
+    <div class="sd-logo-divider"></div>
+    <div class="sd-logo-block">
+      <img src="images/agog_logo.png" alt="AGOG" class="sd-logo-agog">
+      <div class="sd-logo-caption">Submitted to AGOG Open Call 2026</div>
+    </div>
+  </div>
+  <div class="sd-close-coda">&ldquo;She is not a statistic. Neither are the 30 million others.&rdquo;</div>
+</div>`;
 deck.appendChild(cls);allSlides.push(cls);
 
 // Navigation
@@ -1101,15 +1146,16 @@ document.getElementById('btn-prev').addEventListener('click',goPrev);
   if(!sl) return;
   sl.classList.add('slide-triple-read');
   const LOOPS = [
-    { name:'Loop 1 · Vivid Wish', narr:'<strong>The younger sibling</strong> reimagines the pitch-black room as a magical camping trip. Acoustic guitar. Whispered giggles. Fireflies in the canopy. For a moment, it works.', props:['Musical Boombox','Forest Tent Canopy','Magic Wand / Lightsaber'] },
-    { name:'Loop 2 · Golden Lie', narr:'<strong>The older sibling</strong> spins a desperate illusion of warmth and safety. Lullabies sung slightly too loud — to drown out the floodwater outside.', props:['Glowing Nightlight','Luxury Comforter','Warm Fireplace'] },
-    { name:'Loop 3 · Derelict Truth', narr:'<strong>The batteries die.</strong> The flashlight flickers. The magic vanishes. We see the ruin for what it is — wet clay, structural collapse, the cold weight of what was lost.', props:['Mud-caked, dead radio','Wet, heavy debris','Dead battery cylinder'] }
+    { name:'Loop 1 · Vivid Wish', narr:'<strong>The younger sibling</strong> reimagines the dark, mud-caked room as a magical adventure. Acoustic guitar. Whispered giggles. Lasers in the corners and a jungle on the walls. For a moment, it works.', props:['Space Pilot Mask','Spaceship Engine','Laser Turrets','Jungle Vine'] },
+    { name:'Loop 2 · Golden Lie', narr:'<strong>The older sibling</strong> spins a desperate illusion of warmth and safety — a stately fantasy of opulence. Lullabies sung slightly too loud, to drown out the floodwater outside.', props:['High-End Microphone','Concert Fog Machine','Gold Concert Railing','Velvet Curtain Pull'] },
+    { name:'Loop 3 · Derelict Truth', narr:'<strong>The batteries die.</strong> The magic vanishes. The room shows itself for what it is — collapsed walls, exposed rebar, the wet weight of what was lost.', props:['Medical Ventilator','Smoke Ventilation','Exposed Rebar','Warning Bell'] }
   ];
-  // Inline SVGs for the 3 physical props (matched to current state — flashlight, blanket, radio)
+  // Inline SVGs for the 4 physical props — borrowed from the original deck's prop palette
   const ICONS = {
-    radio: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="22" width="52" height="32" rx="3"/><circle cx="46" cy="38" r="6"/><circle cx="46" cy="38" r="2" fill="currentColor"/><line x1="14" y1="32" x2="34" y2="32"/><line x1="14" y1="40" x2="28" y2="40"/><line x1="14" y1="48" x2="34" y2="48"/><line x1="18" y1="22" x2="18" y2="10"/><circle cx="18" cy="10" r="1.6" fill="currentColor"/></svg>',
-    blanket: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18 Q12 14 18 17 Q24 20 30 16 Q36 12 42 16 Q48 20 56 17 L56 46 Q48 49 42 45 Q36 41 30 45 Q24 49 18 46 Q12 43 8 47 Z"/><path d="M14 26 L52 26" opacity=".5"/><path d="M14 34 L52 34" opacity=".4"/></svg>',
-    flashlight: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14 L36 14 L42 22 L42 42 L36 50 L14 50 Z"/><line x1="20" y1="14" x2="20" y2="50" opacity=".6"/><line x1="28" y1="14" x2="28" y2="50" opacity=".6"/><path d="M42 26 L56 18 L56 46 L42 38 Z" opacity=".75"/></svg>'
+    tube:  '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10 Q14 8 16 8 L26 8 Q28 8 28 10 L28 22 Q32 26 32 30 L32 54 Q32 56 30 56 L18 56 Q16 56 16 54 L16 30 Q16 26 14 22 Z"/><line x1="16" y1="22" x2="28" y2="22" opacity=".55"/><circle cx="22" cy="36" r="2" fill="currentColor" opacity=".5"/><path d="M40 12 Q50 14 54 24 Q56 34 50 44 Q46 50 42 52" opacity=".7"/></svg>',
+    fan:   '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="28" r="18"/><path d="M32 28 Q24 14 18 18 Q14 24 24 30 Z" fill="currentColor" opacity=".22"/><path d="M32 28 Q46 22 48 30 Q46 38 32 30 Z" fill="currentColor" opacity=".22"/><path d="M32 28 Q34 42 26 46 Q18 44 26 32 Z" fill="currentColor" opacity=".22"/><circle cx="32" cy="28" r="3.5" fill="currentColor"/><rect x="26" y="48" width="12" height="6" rx="1.5"/><line x1="32" y1="54" x2="32" y2="58"/></svg>',
+    bars:  '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="14" y1="8" x2="14" y2="56"/><line x1="24" y1="8" x2="24" y2="56"/><line x1="34" y1="8" x2="34" y2="56"/><line x1="44" y1="8" x2="44" y2="56"/><line x1="54" y1="8" x2="54" y2="56"/><line x1="10" y1="22" x2="58" y2="22" opacity=".4"/><line x1="10" y1="42" x2="58" y2="42" opacity=".4"/></svg>',
+    rope:  '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 Q12 14 20 22 Q28 30 20 38 Q12 46 20 54 Q24 58 28 56"/><path d="M30 6 Q22 14 30 22 Q38 30 30 38 Q22 46 30 54" opacity=".55"/><path d="M22 14 L30 14" opacity=".4"/><path d="M22 30 L30 30" opacity=".4"/><path d="M22 46 L30 46" opacity=".4"/></svg>'
   };
   sl.innerHTML = `
     <div class="tr-eyebrow">THE PROPS &middot; INTERACTIVE</div>
@@ -1123,9 +1169,10 @@ document.getElementById('btn-prev').addEventListener('click',goPrev);
     <div class="tr-room tr-loop-0">
       <div class="tr-room-label">The Same Physical Room</div>
       <div class="tr-props">
-        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.radio}</div><div class="tr-prop-physical">Emergency Radio</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="0">Musical Boombox</div></div>
-        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.blanket}</div><div class="tr-prop-physical">Torn Blanket</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="1">Forest Tent Canopy</div></div>
-        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.flashlight}</div><div class="tr-prop-physical">Flashlight</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="2">Magic Wand / Lightsaber</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.tube}</div><div class="tr-prop-physical">Plastic Tube</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="0">Space Pilot Mask</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.fan}</div><div class="tr-prop-physical">Desk Fan</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="1">Spaceship Engine</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.bars}</div><div class="tr-prop-physical">Metal Bars</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="2">Laser Turrets</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.rope}</div><div class="tr-prop-physical">Rope</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="3">Jungle Vine</div></div>
       </div>
     </div>
     <div class="tr-narration tr-loop-0">${LOOPS[0].narr}</div>

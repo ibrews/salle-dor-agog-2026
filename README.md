@@ -38,7 +38,17 @@ Covers:
 
 ## Image Credits
 
-Hurricane Helene damage photographs from Wikimedia Commons (CC-licensed):
+**Concept art from the original Salle d'Or pitch deck** (Agile Lens, 2026):
+
+- `spectra3-hero.png` / `spectra3-jungle-gold.png` / `spectra3-rope-lenses.png` / `spectra3-dust-room.png` — Spectra-3 in action through binoculars
+- `spectra3-product.jpg` — Spectra-3 product mockup
+- `observer-livingroom.png` — The Observer concept (binoculars in a domestic interior)
+- `ash-memory-chair.jpg` — Ash & Memory slide (chair through binoculars)
+- `field-office.jpg` — Field Office / Onboarding scene
+- `sky-lanterns-vigil.png` — Sky lantern vigil reference
+- `triple-read-chart.jpg` — Original Tactile Triple Read chart
+
+**Hurricane Helene damage photographs** from Wikimedia Commons (CC-licensed):
 
 - `helene-lake-lure.jpg` — Destruction along the Rocky Broad River at The Flowering Bridge, Lake Lure, NC
 - `helene-marshall.jpg` — Five Months After Helene, Marshall, NC, March 2025 (McMannis Photography)
@@ -46,6 +56,8 @@ Hurricane Helene damage photographs from Wikimedia Commons (CC-licensed):
 - `helene-candler.jpg` — Five Months After Helene, Candler, NC, March 2025
 - `helene-greenriver.jpg` — Green River Dam Hwy 9, September 30, 2024
 - `helene-buncombe.jpg` — Buncombe County, NC — damage after Hurricane Helene floods
+
+**Logos:** Agile Lens logo from `ibrews/spatial-deck` and the NXT BLD 2026 fork. AGOG logo from agog.org.
 
 Survivor stories cited from publicly reported accounts in NPR, CNN, the Asheville Watchdog, and other news outlets.
 
