@@ -37,7 +37,20 @@
    'IFRAME:'  Prefix c.img with 'IFRAME:' to embed a URL (YouTube, etc.)
    ======================================================================= */
 const SECTIONS = [
-  // \u2500\u2500 1. THE PROBLEM \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  // \u2500\u2500 1. AGILE LENS \u2014 WHO WE ARE \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  { year: 'AGILE LENS', accent: 'amber',
+    lesson: { title:'A Decade of Building\nthe Future of\nImmersive Storytelling.', short:'WHO WE ARE',
+      tagline:'<strong>Agile Lens</strong> is an NYC-based immersive design studio. We are XR specialists, Unreal Engine wizards, and theater architects with a 10-year track record of solving hard problems with emerging technology \u2014 for clients including the RSC, Kennedy Center, Lincoln Center, Royal Caribbean, Google, and Disney.<br><br><div class="al-stats"><div class="al-stat"><span class="al-stat-num">10</span><span class="al-stat-lbl">Years in XR</span></div><div class="al-stat"><span class="al-stat-num">100+</span><span class="al-stat-lbl">Projects shipped</span></div><div class="al-stat"><span class="al-stat-num">5</span><span class="al-stat-lbl">Years building VR theater (A Christmas Carol VR)</span></div><div class="al-stat"><span class="al-stat-num">1,000+</span><span class="al-stat-lbl">Visitors/day throughput design</span></div></div>',
+      tags:'NYC \u00b7 Unreal Authorized Trainers \u00b7 Mixed Reality Theater' },
+    cases: [
+      { title:'Track Record in Spatial Storytelling', subtitle:'From experiment to institutional-scale immersive theater',
+        img:'',
+        bullets:['<strong>A Christmas Carol VR</strong> (Actors Theatre of Louisville, 2021\u2013present) \u2014 5 iterations of fully-virtual professional theater, awarded the RSC + XR Network+ grant for the Virtual Rehearsal Room',
+          '<strong>Halcyon Archive Project</strong> \u2014 open-source VR theatre archiving toolkit (github.com/agilelens/halcyonvr)',
+          '<strong>Blueprint Immersive \u00b7 Hyperreal Estate \u00b7 Holodeck Anywhere</strong> \u2014 productized XR workflows for architecture, real estate, and live performance clients'] },
+    ] },
+
+  // \u2500\u2500 2. THE PROBLEM \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
   { year: 'THE PROBLEM', accent: 'amber',
     lesson: { title:'VR Isolates.\nTheater Passivates.\nWe Built a Third Thing.', short:'THE GAP',
       tagline:'Audiences crave agency and connection. VR walls them off from each other. Traditional theater walls them off from the story. Salle d\'Or places them <em>inside</em> the narrative \u2014 together, untethered, in the dark.',
@@ -57,12 +70,12 @@ const SECTIONS = [
       tags:'Site-Specific \u00b7 Western North Carolina \u00b7 Hurricane Helene' },
     cases: [
       { title:'The Onboarding: Welcome to the Red Zone', subtitle:'Role: FEMA / Insurance Assessor \u00b7 Setting: Mobile Command Tent',
-        img:'',
+        img:'images/helene-candler.jpg',
         bullets:['\u201cThe floodwaters receded three weeks ago, but the structural damage is catastrophic. Your objective is simple: Assessment. Tag any salvageable property and confirm structural integrity for the demolition crews.\u201d',
           '\u201cBe warned: The Spectra-3 lenses pick up\u2026 residual energy. Echoes of the people who were trapped here. Do not get distracted. Do your job.\u201d',
           'Audiences enter as detached professionals \u2014 and leave having witnessed something they can\u2019t unfeel'] },
       { title:'Mud & Memory: The Digital Layer', subtitle:'The Spectra-3 acts as a forensic flashlight',
-        img:'',
+        img:'images/helene-greenriver.jpg',
         bullets:['The story lives in the friction between what you uncover in the light (Imagination) and what you feel in the dark (Grit)',
           'Virtual particle trails interact with physical objects \u2014 a light flickers as a ghost passes. The digital and physical are inseparable.',
           'Three scanning frequencies. Three conflicting truths. One house.'] },
@@ -91,12 +104,14 @@ const SECTIONS = [
           'The batteries die. The illusions collapse. Assessors see the ruin for what it is \u2014 and realize they don\u2019t know if the children made it out'] },
     ] },
 
-  // \u2500\u2500 4. THE TACTILE TRIPLE READ \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  // \u2500\u2500 5. THE TACTILE TRIPLE READ \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
   { year: 'THE PROPS', accent: 'amber',
     lesson: { title:'One Object.\nThree Realities.', short:'TRIPLE READ',
-      tagline:'Every physical prop carries three distinct identities across the three frequencies. The art lives in the contrast between what you <em>see</em> through the lens and what you <em>feel</em> in your hands.<br><br><div style="overflow-x:auto;margin-top:1.2em"><table style="width:100%;border-collapse:collapse;font-size:clamp(.62rem,.95vw,.85rem);text-align:left"><thead><tr><th style="padding:.55em .9em;color:var(--amber);border-bottom:1px solid rgba(255,255,255,.18);white-space:nowrap;font-weight:700;letter-spacing:.05em">Prop</th><th style="padding:.55em .9em;color:var(--teal);border-bottom:1px solid rgba(255,255,255,.18);font-weight:700;letter-spacing:.05em">Loop 1 \u00b7 Vivid Wish</th><th style="padding:.55em .9em;color:var(--amber);border-bottom:1px solid rgba(255,255,255,.18);font-weight:700;letter-spacing:.05em">Loop 2 \u00b7 Golden Lie</th><th style="padding:.55em .9em;color:var(--rose);border-bottom:1px solid rgba(255,255,255,.18);font-weight:700;letter-spacing:.05em">Loop 3 \u00b7 Derelict Truth</th></tr></thead><tbody><tr style="border-bottom:1px solid rgba(255,255,255,.07)"><td style="padding:.6em .9em;font-weight:600;white-space:nowrap">Emergency Radio</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Musical Boombox</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Glowing Nightlight</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Mud-caked, dead radio</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.07)"><td style="padding:.6em .9em;font-weight:600;white-space:nowrap">Torn Blanket</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Forest Tent Canopy</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Luxury Comforter</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Wet, heavy debris</td></tr><tr><td style="padding:.6em .9em;font-weight:600;white-space:nowrap">Flashlight</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Magic Wand / Lightsaber</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Warm Fireplace</td><td style="padding:.6em .9em;color:rgba(255,255,255,.72)">Dead battery cylinder</td></tr></tbody></table></div>',
+      tagline:'Every physical prop in the room carries three distinct identities across the three scanning frequencies. The art lives in the contrast between what you <em>see</em> through the lens and what you <em>feel</em> in your hands.',
       tags:'Tactile Design \u00b7 Physical Props \u00b7 Sensory Dissonance' },
-    cases: [] },
+    cases: [
+      { title:'__TRIPLE_READ_WIDGET__', subtitle:'Switch frequencies to reframe the same room', img:'', bullets:[] }
+    ] },
 
   // \u2500\u2500 5. GROUNDED IN REALITY \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
   { year: 'GROUNDED', accent: 'rose',
@@ -104,13 +119,13 @@ const SECTIONS = [
       tagline:'Salle d\u2019Or is grounded in Hurricane Helene (2024) \u2014 the storm that shattered the myth of \u2018climate havens\u2019 when it devastated inland mountain communities across Western North Carolina.',
       tags:'Hurricane Helene \u00b7 Appalachia \u00b7 Climate Displacement' },
     cases: [
-      { title:'The Inland Flood That Shouldn\u2019t Have Happened', subtitle:'Chimney Rock \u00b7 Lake Lure \u00b7 Asheville \u00b7 September 2024',
-        img:'',
-        bullets:['These communities had no hurricane evacuation protocol \u2014 the mountains were the safe zone. Then the roads ceased to exist overnight.',
-          'Survivors sat in pitch-black living rooms for days, rationing supplies, waiting for helicopter rescue. 911 was offline. Power grids destroyed.',
-          '\u201cI used stories and games to keep my kids calm. We pretended we were camping. We pretended the generator was a campfire.\u201d \u2014 survivor account'] },
+      { title:'Real People. Real Names. Real Loss.', subtitle:'The stories Salle d\u2019Or refuses to abstract',
+        img:'images/helene-marshall.jpg',
+        bullets:['<strong>Maria Paez</strong> (Swannanoa, NC) sheltered overnight in a neighbor\u2019s house with her husband and two children as Helene drowned the town. Her 17-year-old son promised her, that night, that they would not die.',
+          '<strong>Jamie Parker</strong>, a child in western North Carolina, was buried under twelve feet of mudslide debris. His dog Tucker, also buried, kept him alive. His mother could only listen.',
+          '<strong>Diego</strong>, age 7, was trapped in a mobile home as hundred-foot trees fell around his family. He now panics at the sound of rain. <em>Asheville Watchdog</em> maintains an updated count of Helene\u2019s dead \u2014 over 240 named lives across the Southeast.'] },
       { title:'The Vigil', subtitle:'The Final Assessment',
-        img:'',
+        img:'images/helene-old-fort.jpg',
         bullets:['The Spectra-3 battery dies. Darkness. Then it flickers back on \u2014 the final assessment report: two names. One status: \u201cRecovered.\u201d One: \u201cNot Recovered.\u201d',
           'The older sibling\u2019s voice plays from a recorded interview, months later: <em>\u201cShe kept asking when the lights would come back on.\u201d</em>',
           'Digital candles fill the room \u2014 one per documented child death from extreme weather events. The number is overwhelming. Bear witness. Act.'] },
@@ -122,11 +137,11 @@ const SECTIONS = [
       tagline:'In 2024, extreme weather events displaced over 30 million people globally \u2014 turning climate havens into sudden disaster zones overnight. Salle d\u2019Or humanizes these statistics, placing audiences inside the moment of survival to generate the empathy that data alone cannot.',
       tags:'Climate Action \u00b7 FEMA \u00b7 Disaster Relief \u00b7 AGOG 2026' },
     cases: [
-      { title:'Alex Coulombe \u00b7 Agile Lens', subtitle:'Immersive theater director and mixed reality producer',
-        img:'',
-        bullets:['Agile Lens specializes in mixed reality installations for live event, institutional, and cultural venues \u2014 with a focus on theatrical storytelling through emerging technology',
-          'Salle d\u2019Or is in active development. Seeking co-producers, venue partners, and grant funding to move from concept to full production.',
-          'alex@agilelens.com \u00b7 agilelens.com \u00b7 AGOG Open Call 2026'] },
+      { title:'Build Salle d\u2019Or With Us.', subtitle:'Agile Lens is ready. We need the right partners.',
+        img:'images/helene-lake-lure.jpg',
+        bullets:['<strong>What we are seeking:</strong> AGOG grant funding to move from concept to a fully producible prototype, plus venue partnerships for the first run',
+          '<strong>What we bring:</strong> A decade of building mixed reality theater at institutional scale, a fully-formed concept, and a team that ships',
+          '<strong>How to reach us:</strong> agilelens.com \u00b7 hello@agilelens.com \u00b7 AGOG Open Call 2026'] },
     ] },
 ];
 
@@ -173,6 +188,12 @@ body.vertical-mode .bg{position:fixed}
 .case-image img{width:100%;display:block;border-radius:18px}
 .case-image iframe{width:100%;aspect-ratio:16/9;border-radius:18px}
 .case-image .ph{width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,rgba(0,212,255,.12),rgba(124,58,237,.12));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.12);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;border-radius:18px}
+.case-text-only{flex-direction:column !important;justify-content:center !important;align-items:stretch !important;padding:clamp(50px,7vw,140px) clamp(80px,12vw,260px) !important;text-align:left}
+.case-text-only .case-ytag{margin-bottom:14px}
+.case-text-only .case-title{font-size:clamp(2rem,4vw,3.4rem)}
+.case-text-only .case-sub{font-size:clamp(1rem,1.4vw,1.4rem);margin-bottom:28px}
+.case-text-only .case-bl li{font-size:clamp(.92rem,1.25vw,1.18rem);line-height:1.55}
+.case-content-wide{max-width:1100px;margin:0 auto}
 .case-content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px}
 .case-ytag{font-size:clamp(.65rem,.95vw,.95rem);font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);opacity:.6}
 .case-title{font-size:clamp(1.8rem,3.6vw,3.8rem);font-weight:700;letter-spacing:-.02em;line-height:1.1}
@@ -183,6 +204,46 @@ body.vertical-mode .bg{position:fixed}
 .accent-purple .case-ytag{color:var(--purple)}.accent-purple .case-bl li::before{background:var(--purple)}
 .accent-amber .case-ytag{color:var(--amber)}.accent-amber .case-bl li::before{background:var(--amber)}
 .accent-rose .case-ytag{color:var(--rose)}.accent-rose .case-bl li::before{background:var(--rose)}
+.al-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,28px);margin-top:1.4em;max-width:900px;margin-left:auto;margin-right:auto}
+.al-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 12px;background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.18);border-radius:14px;text-align:center}
+.al-stat-num{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;color:var(--amber);line-height:1;letter-spacing:-.02em;background:linear-gradient(130deg,#fff 20%,#fde68a 55%,#f59e0b 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.al-stat-lbl{font-size:clamp(.62rem,.85vw,.78rem);color:rgba(255,255,255,.55);margin-top:8px;letter-spacing:.04em;line-height:1.25}
+.vigil-callout{margin-top:1.2em;padding:18px 24px;background:rgba(244,63,94,.06);border-left:3px solid var(--rose);border-radius:6px;font-style:italic;color:rgba(255,255,255,.75);font-size:clamp(.78rem,1.05vw,.95rem)}
+/* ── Triple Read interactive widget ─────────────────────────────────────── */
+.slide-triple-read{flex-direction:column;text-align:center;padding:clamp(40px,4vw,72px) clamp(40px,5vw,80px) !important;justify-content:flex-start !important;gap:0}
+.tr-eyebrow{font-size:clamp(.65rem,.95vw,.95rem);font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--amber);opacity:.65;margin-bottom:10px}
+.tr-heading{font-size:clamp(1.6rem,3vw,2.6rem);font-weight:700;color:#fff;margin-bottom:6px}
+.tr-sub{font-size:clamp(.85rem,1.2vw,1.05rem);color:rgba(255,255,255,.55);margin-bottom:28px}
+.tr-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.tr-tab{font-family:inherit;font-size:clamp(.65rem,1vw,.85rem);font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:14px 26px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.55);border-radius:60px;cursor:pointer;transition:all .35s ease}
+.tr-tab:hover{background:rgba(255,255,255,.07);color:rgba(255,255,255,.85)}
+.tr-tab.tr-active[data-loop="0"]{background:rgba(0,212,255,.13);border-color:var(--teal);color:var(--teal);box-shadow:0 0 32px rgba(0,212,255,.25)}
+.tr-tab.tr-active[data-loop="1"]{background:rgba(245,158,11,.13);border-color:var(--amber);color:var(--amber);box-shadow:0 0 32px rgba(245,158,11,.3)}
+.tr-tab.tr-active[data-loop="2"]{background:rgba(244,63,94,.13);border-color:var(--rose);color:var(--rose);box-shadow:0 0 32px rgba(244,63,94,.25)}
+.tr-room{position:relative;width:100%;max-width:1180px;margin:0 auto;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:34px 28px 28px;background:rgba(0,0,0,.25);transition:all .55s ease;overflow:hidden}
+.tr-room::before{content:"";position:absolute;inset:0;opacity:.32;pointer-events:none;transition:opacity .55s ease,background .55s ease}
+.tr-room.tr-loop-0::before{background:radial-gradient(ellipse 60% 70% at 50% 30%,rgba(0,212,255,.22) 0%,transparent 65%)}
+.tr-room.tr-loop-1::before{background:radial-gradient(ellipse 60% 70% at 50% 30%,rgba(245,158,11,.22) 0%,transparent 65%)}
+.tr-room.tr-loop-2::before{background:radial-gradient(ellipse 60% 70% at 50% 30%,rgba(244,63,94,.18) 0%,transparent 65%)}
+.tr-room-label{position:absolute;top:14px;left:20px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.tr-props{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
+.tr-prop{background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;transition:all .55s ease}
+.tr-room.tr-loop-0 .tr-prop{border-color:rgba(0,212,255,.35)}
+.tr-room.tr-loop-1 .tr-prop{border-color:rgba(245,158,11,.4)}
+.tr-room.tr-loop-2 .tr-prop{border-color:rgba(244,63,94,.32)}
+.tr-prop-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);transition:transform .55s ease,filter .55s ease}
+.tr-room.tr-loop-0 .tr-prop-icon{color:var(--teal);filter:drop-shadow(0 0 14px rgba(0,212,255,.5))}
+.tr-room.tr-loop-1 .tr-prop-icon{color:var(--amber);filter:drop-shadow(0 0 14px rgba(245,158,11,.55))}
+.tr-room.tr-loop-2 .tr-prop-icon{color:var(--rose);filter:drop-shadow(0 0 10px rgba(244,63,94,.35));opacity:.55;transform:rotate(-4deg)}
+.tr-prop-physical{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:600}
+.tr-prop-arrow{font-size:1.1rem;color:rgba(255,255,255,.25);line-height:1}
+.tr-prop-reframe{font-size:clamp(.95rem,1.5vw,1.25rem);font-weight:700;color:#fff;line-height:1.2;min-height:2.4em;display:flex;align-items:center;text-align:center;transition:opacity .35s ease,transform .35s ease}
+.tr-prop-reframe.tr-fading{opacity:0;transform:translateY(8px)}
+.tr-narration{margin-top:24px;padding:20px 28px;background:rgba(0,0,0,.35);border-radius:14px;font-style:italic;color:rgba(255,255,255,.78);font-size:clamp(.85rem,1.15vw,1.05rem);line-height:1.5;border-left:3px solid transparent;transition:border-color .55s ease,color .55s ease;max-width:1180px;margin-left:auto;margin-right:auto}
+.tr-narration.tr-loop-0{border-left-color:var(--teal)}
+.tr-narration.tr-loop-1{border-left-color:var(--amber)}
+.tr-narration.tr-loop-2{border-left-color:var(--rose)}
+.tr-hint{margin-top:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28)}
 .slide-lesson{padding-bottom:clamp(80px,10vh,140px)}
 .year-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(10rem,24vw,26rem);font-weight:700;letter-spacing:-.06em;line-height:1;color:rgba(255,255,255,.028);pointer-events:none;user-select:none}
 .lesson-ey{display:flex;align-items:center;justify-content:center;gap:14px;font-size:clamp(.7rem,1.1vw,1rem);font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-bottom:30px}
@@ -781,14 +842,14 @@ function playBing(){try{const c=sfxCtx(),t=c.currentTime,o=c.createOscillator(),
 
 // Cover
 const cov=document.createElement('div');cov.className='slide active';cov.dataset.type='cover';
-cov.innerHTML=`<div class="event-tag">AGOG Open Call 2026 &middot; Immersive Media &amp; Climate</div><h1 class="talk-title">Salle d&rsquo;Or</h1><p class="talk-subtitle">A Mixed Reality Installation Exploring Climate Disaster,<br>Displacement &amp; Dissociation</p><div class="speaker-card"><div><div class="speaker-name">Alex Coulombe &middot; Agile Lens</div><div class="speaker-co">alex@agilelens.com</div></div></div>`;
+cov.innerHTML=`<div class="event-tag">AGOG Open Call 2026 &middot; Immersive Media &amp; Climate</div><h1 class="talk-title">Salle d&rsquo;Or</h1><p class="talk-subtitle">A Mixed Reality Installation Exploring Climate Disaster,<br>Displacement &amp; Dissociation</p><div class="speaker-card"><div><div class="speaker-name">An Agile Lens Production</div><div class="speaker-co">Immersive Design Studio &middot; NYC &middot; agilelens.com</div></div></div>`;
 deck.appendChild(cov);allSlides.push(cov);
 
 // Build sections
 SECTIONS.forEach((sec,si)=>{
   const ac=sec.accent!=='teal'?` accent-${sec.accent}`:'';
   const ls=document.createElement('div');ls.className=`slide slide-lesson${ac}`;ls.dataset.type='lesson';ls.dataset.year=sec.year;ls.dataset.section=si;ls.dataset.ln=si+1;
-  ls.innerHTML=`<div class="year-ghost">${sec.year}</div><div class="lesson-ey"><span class="ey-yr">${sec.year}</span><span class="ey-sep">&middot;</span><span class="ey-badge">Lesson ${si+1} / ${SECTIONS.length}</span></div><h2 class="lesson-title">${sec.lesson.title}</h2><p class="lesson-tagline">${sec.lesson.tagline.replace(/<br><br>/g,'<br><span class="para-gap"></span>')}</p>${sec.lesson.tags?`<div class="lesson-tags">${sec.lesson.tags}</div>`:''}<div class="lesson-rule"></div>`;
+  ls.innerHTML=`<div class="year-ghost">${sec.year}</div><div class="lesson-ey"><span class="ey-yr">${sec.year}</span><span class="ey-sep">&middot;</span><span class="ey-badge">${si+1} / ${SECTIONS.length}</span></div><h2 class="lesson-title">${sec.lesson.title}</h2><p class="lesson-tagline">${sec.lesson.tagline.replace(/<br><br>/g,'<br><span class="para-gap"></span>')}</p>${sec.lesson.tags?`<div class="lesson-tags">${sec.lesson.tags}</div>`:''}<div class="lesson-rule"></div>`;
   deck.appendChild(ls);allSlides.push(ls);lessonIdxs.push(allSlides.length-1);
   sec.cases.forEach(c=>{
     const s=document.createElement('div');s.className=`slide case-slide${ac}${c.layout?' layout-'+c.layout:''}${c.gridCover?' grid-cover':''}`;s.dataset.type='case';s.dataset.year=sec.year;s.dataset.section=si;
@@ -881,23 +942,30 @@ SECTIONS.forEach((sec,si)=>{
       },0);
       return;
     }
-    let imgHTML;
+    let imgHTML=null;
     if(c.img&&c.img.startsWith('IFRAME:')){
       const iframeSrc=c.img.slice(7);
       imgHTML=`<iframe src="${iframeSrc}" style="width:100%;height:100%;border:none;border-radius:18px" allow="autoplay;fullscreen;xr-spatial-tracking" allowfullscreen></iframe>`;
-    } else if(c.img&&c.img!=='MEDIA_CYCLER'){
-      imgHTML=`<img src="${c.img}" loading="lazy" style="border-radius:18px">`;
-    } else {
+    } else if(c.img==='MEDIA_CYCLER'){
       imgHTML=`<div class="media-cycler-mount" style="width:100%;height:100%"></div>`;
+    } else if(c.img){
+      imgHTML=`<img src="${c.img}" loading="lazy" style="border-radius:18px">`;
     }
-    s.innerHTML=`<div class="case-image">${imgHTML}</div><div class="case-content"><div class="case-ytag">Case Study &middot; ${sec.lesson.short||''}</div><h2 class="case-title">${c.title}</h2><p class="case-sub">${c.subtitle}</p><ul class="case-bl">${c.bullets.map(b=>`<li>${b.replace(/\n/g,'<br>')}</li>`).join('')}</ul></div>`;
+    const ytag=`<div class="case-ytag">${sec.year}${sec.lesson.short?' &middot; '+sec.lesson.short:''}</div>`;
+    const content=`<div class="case-content"><h2 class="case-title">${c.title}</h2><p class="case-sub">${c.subtitle}</p><ul class="case-bl">${c.bullets.map(b=>`<li>${b.replace(/\n/g,'<br>')}</li>`).join('')}</ul></div>`;
+    if(imgHTML){
+      s.innerHTML=`<div class="case-image">${imgHTML}</div><div class="case-content">${ytag}<h2 class="case-title">${c.title}</h2><p class="case-sub">${c.subtitle}</p><ul class="case-bl">${c.bullets.map(b=>`<li>${b.replace(/\n/g,'<br>')}</li>`).join('')}</ul></div>`;
+    } else {
+      s.classList.add('case-text-only');
+      s.innerHTML=`<div class="case-content case-content-wide">${ytag}<h2 class="case-title">${c.title}</h2><p class="case-sub">${c.subtitle}</p><ul class="case-bl">${c.bullets.map(b=>`<li>${b.replace(/\n/g,'<br>')}</li>`).join('')}</ul></div>`;
+    }
     deck.appendChild(s);allSlides.push(s);
   });
 });
 
 // Bonus
 const bon=document.createElement('div');bon.className='slide slide-lesson slide-bonus';bon.dataset.type='bonus';bon.dataset.year=BONUS.year;
-bon.innerHTML=`<div class="year-ghost">${BONUS.year}</div><div class="lesson-ey"><span class="ey-yr">${BONUS.year}</span><span class="ey-sep">&middot;</span><span class="ey-badge" style="color:var(--amber)">BONUS LESSON</span></div><h2 class="lesson-title">${BONUS.title}</h2><p class="lesson-tagline">${BONUS.tagline.replace(/<br><br>/g,'<br><span class="para-gap"></span>')}</p><div class="lesson-rule" style="background:var(--amber)"></div>`;
+bon.innerHTML=`<div class="year-ghost">${BONUS.year}</div><div class="lesson-ey"><span class="ey-yr">${BONUS.year}</span><span class="ey-sep">&middot;</span><span class="ey-badge" style="color:var(--amber)">CODA</span></div><h2 class="lesson-title">${BONUS.title}</h2><p class="lesson-tagline">${BONUS.tagline.replace(/<br><br>/g,'<br><span class="para-gap"></span>')}</p><div class="lesson-rule" style="background:var(--amber)"></div>`;
 deck.appendChild(bon);allSlides.push(bon);
 
 // 3D Monocle on Bonus slide
@@ -1026,6 +1094,69 @@ function updateHash(){if(current>0)location.hash=current;else if(location.hash)l
 function goToFromHash(){const raw=location.hash.replace('#','');if(raw==='00'||raw==='0'){goTo(0);return;}const h=parseInt(raw);if(h>=0&&h<total)goTo(h);}
 document.getElementById('btn-next').addEventListener('click',()=>{if(window._arrowSubstep!==false&&advanceStep())return;goNext();});
 document.getElementById('btn-prev').addEventListener('click',goPrev);
+
+// ── Triple Read interactive widget ──────────────────────────────────────────
+(function(){
+  const sl = allSlides.find(s => s && s.dataset && s.dataset.type==='case' && (s.textContent||'').includes('__TRIPLE_READ_WIDGET__'));
+  if(!sl) return;
+  sl.classList.add('slide-triple-read');
+  const LOOPS = [
+    { name:'Loop 1 · Vivid Wish', narr:'<strong>The younger sibling</strong> reimagines the pitch-black room as a magical camping trip. Acoustic guitar. Whispered giggles. Fireflies in the canopy. For a moment, it works.', props:['Musical Boombox','Forest Tent Canopy','Magic Wand / Lightsaber'] },
+    { name:'Loop 2 · Golden Lie', narr:'<strong>The older sibling</strong> spins a desperate illusion of warmth and safety. Lullabies sung slightly too loud — to drown out the floodwater outside.', props:['Glowing Nightlight','Luxury Comforter','Warm Fireplace'] },
+    { name:'Loop 3 · Derelict Truth', narr:'<strong>The batteries die.</strong> The flashlight flickers. The magic vanishes. We see the ruin for what it is — wet clay, structural collapse, the cold weight of what was lost.', props:['Mud-caked, dead radio','Wet, heavy debris','Dead battery cylinder'] }
+  ];
+  // Inline SVGs for the 3 physical props (matched to current state — flashlight, blanket, radio)
+  const ICONS = {
+    radio: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="22" width="52" height="32" rx="3"/><circle cx="46" cy="38" r="6"/><circle cx="46" cy="38" r="2" fill="currentColor"/><line x1="14" y1="32" x2="34" y2="32"/><line x1="14" y1="40" x2="28" y2="40"/><line x1="14" y1="48" x2="34" y2="48"/><line x1="18" y1="22" x2="18" y2="10"/><circle cx="18" cy="10" r="1.6" fill="currentColor"/></svg>',
+    blanket: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18 Q12 14 18 17 Q24 20 30 16 Q36 12 42 16 Q48 20 56 17 L56 46 Q48 49 42 45 Q36 41 30 45 Q24 49 18 46 Q12 43 8 47 Z"/><path d="M14 26 L52 26" opacity=".5"/><path d="M14 34 L52 34" opacity=".4"/></svg>',
+    flashlight: '<svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14 L36 14 L42 22 L42 42 L36 50 L14 50 Z"/><line x1="20" y1="14" x2="20" y2="50" opacity=".6"/><line x1="28" y1="14" x2="28" y2="50" opacity=".6"/><path d="M42 26 L56 18 L56 46 L42 38 Z" opacity=".75"/></svg>'
+  };
+  sl.innerHTML = `
+    <div class="tr-eyebrow">THE PROPS &middot; INTERACTIVE</div>
+    <div class="tr-heading">Same Room. Same Objects. Three Realities.</div>
+    <div class="tr-sub">Click a scanning frequency to see how the Spectra-3 reframes the same physical space.</div>
+    <div class="tr-tabs">
+      <button class="tr-tab tr-active" data-loop="0">Loop 1 &middot; Vivid Wish</button>
+      <button class="tr-tab" data-loop="1">Loop 2 &middot; Golden Lie</button>
+      <button class="tr-tab" data-loop="2">Loop 3 &middot; Derelict Truth</button>
+    </div>
+    <div class="tr-room tr-loop-0">
+      <div class="tr-room-label">The Same Physical Room</div>
+      <div class="tr-props">
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.radio}</div><div class="tr-prop-physical">Emergency Radio</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="0">Musical Boombox</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.blanket}</div><div class="tr-prop-physical">Torn Blanket</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="1">Forest Tent Canopy</div></div>
+        <div class="tr-prop"><div class="tr-prop-icon">${ICONS.flashlight}</div><div class="tr-prop-physical">Flashlight</div><div class="tr-prop-arrow">↓</div><div class="tr-prop-reframe" data-slot="2">Magic Wand / Lightsaber</div></div>
+      </div>
+    </div>
+    <div class="tr-narration tr-loop-0">${LOOPS[0].narr}</div>
+    <div class="tr-hint">← / → keys, click a tab, or press 1 / 2 / 3</div>
+  `;
+  const tabs = sl.querySelectorAll('.tr-tab');
+  const room = sl.querySelector('.tr-room');
+  const narr = sl.querySelector('.tr-narration');
+  const slots = sl.querySelectorAll('.tr-prop-reframe');
+  function setLoop(idx){
+    if(idx<0)idx=0;if(idx>2)idx=2;
+    tabs.forEach((t,i)=>t.classList.toggle('tr-active',i===idx));
+    room.classList.remove('tr-loop-0','tr-loop-1','tr-loop-2');room.classList.add('tr-loop-'+idx);
+    slots.forEach(s=>s.classList.add('tr-fading'));
+    setTimeout(()=>{
+      slots.forEach((s,i)=>{s.textContent=LOOPS[idx].props[i];s.classList.remove('tr-fading');});
+      narr.className='tr-narration tr-loop-'+idx;
+      narr.innerHTML=LOOPS[idx].narr;
+    },180);
+  }
+  tabs.forEach(t=>t.addEventListener('click',()=>setLoop(parseInt(t.dataset.loop))));
+  // Number-key triggers + arrow keys cycle while on this slide
+  let curLoop=0;
+  document.addEventListener('keydown',e=>{
+    if(allSlides[current]!==sl)return;
+    if(e.key==='1'){setLoop(0);curLoop=0;e.stopPropagation();}
+    else if(e.key==='2'){setLoop(1);curLoop=1;e.stopPropagation();}
+    else if(e.key==='3'){setLoop(2);curLoop=2;e.stopPropagation();}
+  },true);
+})();
+
 // ── Playing indicator + Autoplay ──
 const _navSpinner=document.getElementById('nav-playing');
 let _playingTimer=null;
@@ -1081,7 +1212,7 @@ if(_paramMode!=='edit'){const at=document.getElementById('anno-toggle');if(at)at
 if(_wantLandscape){const lo=document.createElement('div');lo.id='landscape-prompt';lo.innerHTML='<div style="text-align:center"><div style="font-size:2.5rem;margin-bottom:12px">\ud83d\udcf1\u2194\ufe0f</div><div style="font-size:1.1rem;font-weight:600;letter-spacing:.1em">Please rotate your device<br>to landscape mode</div></div>';lo.style.cssText='position:fixed;inset:0;z-index:9999;background:var(--bg,#060810);color:var(--text,#f0f4ff);display:none;align-items:center;justify-content:center;font-family:var(--font)';document.body.appendChild(lo);function checkO(){lo.style.display=window.innerHeight>window.innerWidth?'flex':'none';}checkO();window.addEventListener('resize',checkO);screen.orientation?.addEventListener('change',checkO);}
 
 // Slide grid
-function buildGrid(){const g=document.getElementById('slide-grid');g.innerHTML='';allSlides.forEach((s,i)=>{const t=document.createElement('div');const ty=s.dataset.type||'slide';let c='sg-thumb';if(i===current)c+=' active';if(s.dataset.hidden==='1')c+=' slide-hidden';if(ty==='bonus')c+=' sg-bonus';t.className=c;const lb=ty==='lesson'?(s.dataset.ln?`L${s.dataset.ln}`:'LESSON'):ty==='case'?`${s.dataset.year}`:ty.toUpperCase();t.innerHTML=`<span class="sg-num">${String(i).padStart(2,'0')}</span><span class="sg-label">${lb}</span>`;t.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey){s.dataset.hidden=s.dataset.hidden==='1'?'':'1';buildGrid();return;}goTo(i);});g.appendChild(t);});const a=g.querySelector('.active');if(a)a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+function buildGrid(){const g=document.getElementById('slide-grid');g.innerHTML='';allSlides.forEach((s,i)=>{const t=document.createElement('div');const ty=s.dataset.type||'slide';let c='sg-thumb';if(i===current)c+=' active';if(s.dataset.hidden==='1')c+=' slide-hidden';if(ty==='bonus')c+=' sg-bonus';t.className=c;const lb=ty==='lesson'?(s.dataset.year||'SECTION'):ty==='case'?`${s.dataset.year}`:ty.toUpperCase();t.innerHTML=`<span class="sg-num">${String(i).padStart(2,'0')}</span><span class="sg-label">${lb}</span>`;t.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey){s.dataset.hidden=s.dataset.hidden==='1'?'':'1';buildGrid();return;}goTo(i);});g.appendChild(t);});const a=g.querySelector('.active');if(a)a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
 const gridZone=document.getElementById('slide-grid-zone'),gridEl=document.getElementById('slide-grid');let gridTimer=null;
 gridZone.addEventListener('mouseenter',()=>{clearTimeout(gridTimer);gridEl.classList.add('visible');});
 gridEl.addEventListener('mouseenter',()=>{clearTimeout(gridTimer);gridEl.classList.add('visible');});

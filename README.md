@@ -36,6 +36,19 @@ Covers:
 
 [Spatial Deck](https://github.com/ibrews/spatial-deck) — open-source single-file HTML presentation framework for XR professionals.
 
+## Image Credits
+
+Hurricane Helene damage photographs from Wikimedia Commons (CC-licensed):
+
+- `helene-lake-lure.jpg` — Destruction along the Rocky Broad River at The Flowering Bridge, Lake Lure, NC
+- `helene-marshall.jpg` — Five Months After Helene, Marshall, NC, March 2025 (McMannis Photography)
+- `helene-old-fort.jpg` — Old Fort Debris Yard (Bill McMannis, Flickr)
+- `helene-candler.jpg` — Five Months After Helene, Candler, NC, March 2025
+- `helene-greenriver.jpg` — Green River Dam Hwy 9, September 30, 2024
+- `helene-buncombe.jpg` — Buncombe County, NC — damage after Hurricane Helene floods
+
+Survivor stories cited from publicly reported accounts in NPR, CNN, the Asheville Watchdog, and other news outlets.
+
 ---
 
-**Contact:** alex@agilelens.com · [agilelens.com](https://agilelens.com)
+**Contact:** hello@agilelens.com · [agilelens.com](https://agilelens.com)
