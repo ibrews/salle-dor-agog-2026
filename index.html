@@ -77,8 +77,9 @@ const SECTIONS = [
           'Audiences enter as detached professionals \u2014 and leave having witnessed something they can\u2019t unfeel'] },
       { title:'Mud & Memory: The Digital Layer', subtitle:'The Spectra-3 acts as a forensic flashlight',
         img:'images/ash-memory-chair.jpg',
-        bullets:['The story lives in the friction between what you uncover in the light (Imagination) and what you feel in the dark (Grit)',
-          'Virtual particle trails interact with physical objects \u2014 a light flickers as a ghost passes. The digital and physical are inseparable.',
+        bullets:['Built in \u2018Appalachian Clay.\u2019 Everything\u2014ruined furniture, walls, debris\u2014is caked in thick, dried flood mud. It is pitch black, illuminated only by your device.',
+          'The story lives in the friction between what you uncover in the light (Imagination) and what you feel in the dark (Grit)',
+          'Virtual particle trails interact with physical objects \u2014 a lamp flickers as a ghost passes. The digital and physical are inseparable.',
           'Three scanning frequencies. Three conflicting truths. One house.'] },
     ] },
 
@@ -1191,8 +1192,10 @@ document.getElementById('btn-prev').addEventListener('click',goPrev);
   const room = sl.querySelector('.tr-room');
   const narr = sl.querySelector('.tr-narration');
   const slots = sl.querySelectorAll('.tr-prop-reframe');
+  let curLoop=0;
   function setLoop(idx){
     if(idx<0)idx=0;if(idx>2)idx=2;
+    curLoop=idx;
     tabs.forEach((t,i)=>t.classList.toggle('tr-active',i===idx));
     room.classList.remove('tr-loop-0','tr-loop-1','tr-loop-2');room.classList.add('tr-loop-'+idx);
     slots.forEach(s=>s.classList.add('tr-fading'));
@@ -1203,13 +1206,15 @@ document.getElementById('btn-prev').addEventListener('click',goPrev);
     },180);
   }
   tabs.forEach(t=>t.addEventListener('click',()=>setLoop(parseInt(t.dataset.loop))));
-  // Number-key triggers + arrow keys cycle while on this slide
-  let curLoop=0;
+  // Arrow keys and number keys cycle through loops while on this slide.
+  // Arrow keys only intercept when there is a next/prev loop — at the boundary they fall through to slide navigation.
   document.addEventListener('keydown',e=>{
     if(allSlides[current]!==sl)return;
-    if(e.key==='1'){setLoop(0);curLoop=0;e.stopPropagation();}
-    else if(e.key==='2'){setLoop(1);curLoop=1;e.stopPropagation();}
-    else if(e.key==='3'){setLoop(2);curLoop=2;e.stopPropagation();}
+    if(e.key==='1'){setLoop(0);e.stopPropagation();}
+    else if(e.key==='2'){setLoop(1);e.stopPropagation();}
+    else if(e.key==='3'){setLoop(2);e.stopPropagation();}
+    else if((e.key==='ArrowRight'||e.key===' ')&&curLoop<2){setLoop(curLoop+1);e.stopPropagation();e.preventDefault();}
+    else if(e.key==='ArrowLeft'&&curLoop>0){setLoop(curLoop-1);e.stopPropagation();e.preventDefault();}
   },true);
 })();
 
